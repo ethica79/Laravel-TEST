@@ -8,6 +8,8 @@
 
 <h1>Bienvenue sur MyMoodle</h1>
 
+<a href="/form">Inscription</a>
+
 
 
 

@@ -17,19 +17,19 @@ Route::get('/', function () {
     return view('acceuil');
 });
 
+// Route pour afficher le formulaire
 Route::get('/form', function () {
     return view('form');
 });
 
-
-Route::get('/form', function (Illuminate\Http\Request $request) {
+// Route pour traiter la soumission du formulaire et afficher le récapitulatif
+Route::post('/form', function (Illuminate\Http\Request $request) {
     // Récupérer les données du formulaire
     $nom    = $request->input('nom');
     $prenom = $request->input('prenom');
-    $age   = $request->input('age');
+    $age    = $request->input('age');
     
     // Afficher la vue de récapitulatif avec les données saisies
     return view('confirm', compact('nom','prenom','age'));
 });
-
 

@@ -9,24 +9,13 @@
 @section('contenue')
 
 
-<form action="/confirm" method="GET">
-        <div>
-            <div>
-                <label for="nom" class="form-label">nom</label>
-                <input type="text" id="nom" name="nom">
-            </div>
-            <div>
-                <label for="prenom" >prenom</label>
-                <input type="text" id="prenom" name="prenom">
-            </div>
-            <div>
-                <label for="age" >age</label>
-                <input type="number" id="age" name="age">
-            </div>
-            <div>
-                <button type="submit">valide</button>
-            </div>
-        </div>
+<form action="/form" method="POST">
+    @csrf
+    <input type="text" name="nom" placeholder="Nom">
+    <input type="text" name="prenom" placeholder="Prénom">
+    <input type="number" name="age" placeholder="Âge">
+    <button type="submit">Envoyer</button>
 </form>
+
 
 @endsection('contenue')
